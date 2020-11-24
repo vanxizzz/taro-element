@@ -1,0 +1,47 @@
+@import "~@/globalCss/constancePx.scss";
+
+.myFloatLayout {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    // background-color: rgba(0,0,0,0.5);
+    
+    transition: all 0.4s;
+    &.show {
+        background-color: rgba(0,0,0,0.5);
+        // background-color: #f40;
+        
+    }
+    &.hide {
+        background-color: rgba(0,0,0,0);
+        
+        // background-color: #00f;
+    }
+    .mainInfo {
+        transition: all 0.4s;
+        &.show {
+            transform: translateY(0);
+        }
+        &.hide {
+            transform: translateY(100%);
+        }
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        // background-color: #f40;
+        
+        border-radius: 60rpx 60rpx 0rpx 0rpx;
+    }
+    .bottom {
+        z-index: 99;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}

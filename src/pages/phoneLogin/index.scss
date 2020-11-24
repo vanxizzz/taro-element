@@ -1,0 +1,54 @@
+@import "~@/globalCss/constancePx.scss";
+@import "~@/globalCss/color";
+.login {
+    padding: $pagePadding;
+    padding-top: 60rpx;
+
+    .loginForm {
+        .item {
+            height: 146rpx;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            padding: 20rpx 0;
+            border-bottom: 1rpx solid #ccc;
+            &.phone {
+                Input {
+                    font-size:40rpx;
+                    flex-grow: 1;
+                }
+            }
+            &.code {
+                Input {
+                    font-size:40rpx;
+                    flex-grow: 1;
+                }
+                .sendBtn {
+                    width: 300rpx;
+                    height: 84rpx;
+                    line-height: 84rpx;
+                    box-sizing: border-box;
+                    color: $themeBlue;
+                    border: 1rpx solid $themeBlue;
+                }
+            }
+        }
+        .loginBtnWrapper {
+            display: flex;
+            margin: 50rpx 0;
+            .loginBtn {
+                flex-grow: 1;
+                background-color: $themeBlue;
+                color: #fff;
+                height: 100rpx;
+            }
+        }
+        .protocolWrapper {
+            font-size: 28rpx;
+            .protocol {
+                color: $themeBlue;
+            }
+        }
+    }
+    
+}

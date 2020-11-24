@@ -1,0 +1,70 @@
+@import "~@/globalCss/icon.scss";
+@import "~@/globalCss/color";
+.addressItem {
+    background-color: #fff;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .right {
+        margin-right: 40rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left {
+        margin-left: 40rpx;
+        .item {
+            display: flex;
+            align-items: center;
+            View {
+                margin-right: 20rpx;
+            }
+            View:last-child {
+                margin-right: 0;
+            }
+            &.top {
+                margin-bottom: 12rpx;
+            }
+            .name {
+                font-weight: bold;
+                font-size: 36rpx;
+            }
+            .default {
+                border-radius: 20rpx;
+                background-color: #FF6020;
+                color: #fff;
+                text-align: center;
+                padding: 5rpx 10rpx;
+            }
+            .sex {
+                // margin: 0 20rpx;
+            }
+            .address {
+                // margin: 0 20rpx;
+                color: #9F9F9F;
+                flex-grow: 1;
+            }
+            .tag {
+                font-size: 30rpx;
+                width: 150rpx;
+                box-sizing: border-box;
+                text-align: center;
+                padding: 3rpx 20rpx;
+                color: #fff;
+                font-weight: bold;
+                &.tag-home {
+                    background-color: #FF6020;
+                    
+                }
+                &.tag-school {
+                    background-color: #5DCF7B;
+                }
+                &.tag-company {
+                    background-color: $themeBlue;
+                }
+            }
+        }
+    }
+}

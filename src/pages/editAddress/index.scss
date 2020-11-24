@@ -1,0 +1,20 @@
+@import "~@/globalCss/color";
+@import "~@/globalCss/constancePx";
+.editAddress {
+    padding:$pagePadding;
+    
+    .btn {
+        width: 100%;
+        border-radius: 50rpx;
+        font-size: 35rpx;
+        margin: 20rpx 0;
+        &.saveBtn {
+            color: #fff;
+            background-color: $themeBlue;
+        }
+        &.deleteBtn {
+            color: #fff;
+            background-color: #f40;
+        }
+    }
+}

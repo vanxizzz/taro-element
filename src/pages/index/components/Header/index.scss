@@ -1,0 +1,38 @@
+@import "~@/globalCss/icon.scss";
+.locationBar {
+    display: flex;
+    align-items: center;
+    .shadowBox {
+        flex-grow: 1;
+        background-color: rgba(255,255,255,.9);
+        position: relative;
+        left: -20rpx;
+    }
+    .locationName {
+        margin: 0 20rpx;
+        width: 300rpx;
+        // font-size: 30rpx;
+        // white-space: nowrap;
+        word-break: keep-all;
+    }
+    .downIcon {
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        left: 30rpx;
+    }
+}
+
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1F1F2;
+    border-radius: 30rpx;
+    height: 70rpx;
+    .placeholderWord {
+        color:#A9A9AA;
+        margin-left: 20rpx;
+    }
+}

@@ -1,0 +1,75 @@
+@import "~@/globalCss/icon.scss";
+
+.businessItem {
+    display: flex;
+    padding:10rpx 0;
+    .image {
+        margin-right: 20rpx;
+        Image {
+            border-radius: 15rpx;
+            width: 180rpx;
+            height: 180rpx;
+        }
+    }
+    .right {
+        flex-grow: 1;
+        .titleWrapper {
+            margin-bottom: 12rpx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .title {
+                font-size: 34rpx;
+                font-weight: bold;
+                
+            }
+        }
+        .elseInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 9rpx;
+            font-size: 27rpx;
+            .markAndSell {
+                display: flex;
+                align-items: center;
+                .mark {
+                    .markNum {
+                        color: #f40;
+                    }
+                }
+                .sell {
+                    color: $themeGray;
+                    margin-left: 18rpx;
+                }
+            }
+            .timeAndDistance {
+                color: $themeGray;
+                .time {
+                    margin-right: 10rpx;
+                }
+            }
+
+
+        }
+        .someFee {
+            font-size: 27rpx;
+            color: $themeGray;
+            display: flex;
+            align-items: center;
+            margin-bottom: 9rpx;
+            .deliverFee {
+                margin-left: 10rpx;
+            }
+        }
+        .shortIntroduction {
+            .word {
+                display: inline-block;
+                background-color: #FFEEE1;
+                color: #FE7000;
+                font-size: 27rpx;
+                padding: 6rpx 20rpx;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import "~@/globalCss/constancePx.scss";
+
+.pageSetting{
+    height:100vh;
+}
+.scrollWrapper {
+    height:80%;
+    // padding: $pagePadding;
+    box-sizing: border-box;
+    
+}
+.bottom {
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+}

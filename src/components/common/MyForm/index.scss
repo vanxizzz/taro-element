@@ -1,0 +1,42 @@
+@import "~@/globalCss/color";
+.myForm {
+    .item {
+        display: flex;
+        align-items: center;
+        padding: 20rpx 0;
+        
+        .label {
+            width: 200rpx;
+            text-align: center;
+        }
+        .content {
+            flex-grow: 1;
+            .input {
+                width: 100%;
+                box-sizing: border-box;
+                color: #333;
+                font-size: 32rpx;
+                height: 44.8rpx;
+                line-height: 1.5;
+            }
+            
+        }
+        
+    }
+    .btnWrapper {
+        .btn {
+            width: 100%;
+            border-radius: 50rpx;
+            font-size: 35rpx;
+            margin: 20rpx 0;
+            &.saveBtn {
+                color: #fff;
+                background-color: $themeBlue;
+            }
+            &.deleteBtn {
+                color: #fff;
+                background-color: #f40;
+            }
+        }
+    }
+}

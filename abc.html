@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myModal {
+            width: 40%;
+            padding: 30px;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            border-radius: 10px;
+        }
+
+        .myModal .btns {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .myModal .confirmBtn {
+            padding: 5px 10px;
+            background-color: skyblue;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .myModal .cancelBtn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid #aaa;
+            color: skyblue;
+        }
+
+        .myModal .inputWrapper {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 30px;
+        }
+
+        .myModal .inputWrapper input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+        }
+
+        .myModal .title {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tt">啊实打实打扫打扫克撒赖科技</div>
+    <div class="myModal">
+        <div class="title">输入内容根据@分开，如：外卖@科技@月@日</div>
+        <div class="inputWrapper">
+            <input type="text">
+        </div>
+        <div class="btns">
+            <div class="confirmBtn">确定</div>
+            <div class="cancelBtn">取消</div>
+        </div>
+    </div>
+    <script>
+        class Search {
+            constructor(selector) {
+                this.element = document.querySelector(selector);
+                this.originHtml = this.element.innerHTML;
+            }
+            resume() {
+                this.element.innerHTML = this.originHtml;
+            }
+            searchKeywords(keywords) {
+                if (!keywords) {
+                    return;
+                }
+                let keywordsArr = keywords.split("@");
+                let regStr = "";
+                keywordsArr.forEach(item => {
+                    regStr += `(${item})|`;
+                });
+                regStr = regStr.replace(/\|$/, "");//最后长这样："(科技)|(扫楼)"
+                let reg = new RegExp(regStr, "g");
+                let arr = [...this.originHtml.matchAll(reg)];
+                this.element.innerHTML = this.originHtml.replace(reg, matchStr => {
+                    return `<span style='color:#f40;font-weight:bold;'>${matchStr}</span>`
+                });
+            }
+        }
+        let s = new Search(".leftTextBoxTextBottomCenterList span[data-key=text]");
+        function showModal(status) {
+            document.querySelector(".myModal").style.display = status ? "block" : "none";
+        };
+        let modal = document.createElement("div");
+        modal.innerHTML = `
+        <div class="myModal">
+        <div class="title">输入内容根据@分开，如：外卖@科技@月@日</div>
+        <div class="inputWrapper">
+            <input type="text">
+        </div>
+        <div class="btns">
+            <div class="confirmBtn" onclick="mySearch()">确定</div>
+            <div class="cancelBtn" onclick="showModal(false)">取消</div>
+        </div>
+    </div>
+        `;
+        let style = document.createElement("style");
+        style.innerText = ".myModal{width:40%;padding:30px;position:fixed;top:0;left:50%;transform:translateX(-50%);background-color:#000;border-radius:10px;display:none;}.myModal .btns{width:100%;display:flex;justify-content:space-around;align-items:center;}.myModal .confirmBtn{padding:5px 10px;background-color:skyblue;color:#fff;cursor:pointer;}.myModal .cancelBtn{cursor:pointer;padding:5px 10px;border:1px solid #aaa;color:skyblue;}.myModal .inputWrapper{width:100%;height:30px;margin-bottom:30px;}.myModal .inputWrapper input{width:100%;height:100%;border:none;outline:none;}.myModal .title{color:#fff;margin-bottom:30px;}";
+
+        document.body.appendChild(modal);
+        document.head.appendChild(style);
+
+
+        ; (() => {
+            let inputText = document.querySelector(".inputWrapper input");
+            let str = prompt("输入关键字，通过@分开，比如：外卖@科技@月@日");
+            s.searchKeywords(str);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+
+
+.numCalc {
+    display: flex;
+    align-items: center;
+    .item {
+        &.num {
+            margin: 0 10rpx;
+        }
+    }
+}

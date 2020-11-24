@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        #app {
+            width: 50%;
+            border: 1px solid teal;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        ul li {
+            margin-bottom: 20px;
+        }
+
+        body {
+            color: #7878a0;
+        }
+
+        a {
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px;
+            margin-right: 5px;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            color: #fff;
+            background: #f40;
+            cursor: pointer;
+        }
+
+        .active {
+            color: #fff;
+            background: #f40;
+        }
+
+        .type-list {
+            display: inline-block;
+        }
+
+        .selected-menu {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <!-- 怎么布局好呢 -->
+            <!-- 
+
+                你的goodsList长这样[{
+                    title: '上装',
+                    typeList: ['全部', '针织衫', '毛呢外套', 'T恤', '羽绒服', '棉衣', '卫衣', '风衣'],
+                    id: 1,
+                }, {
+                    title: '裤装',
+                    typeList: ['全部', '牛仔裤', '小脚/铅笔裤', '休闲裤', '打底裤', '哈伦裤'],
+                    id: 2,
+                }, {
+                    title: '裙装',
+                    typeList: ['全部', '连衣裙', '半身裙', '长袖连衣裙', '中长款连衣裙'],
+                    id: 3,
+                }]
+             -->
+            <template v-for="list in goodsList">
+                <li :myid="list.id">
+                    <span> {{ list.title+":"}}</span>
+                    <div class="type-list">
+                        <a v-for="(typeli,typelistIndex) in list.typeList" :key="typeli"
+                            @click="selectedHandle(list.id,typeli)" :class="isCur(list.id,typeli)">{{ typeli }}</a>
+                    </div>
+                </li>
+            </template>
+        </ul>
+        <hr>
+        <div class="selected">
+            <span>已选条件:</span>
+            <!-- 
+                [
+                    可能是这样
+                    {
+                        text: "xxx",
+                        id: 0,
+                        like: true
+                    }
+                    可能是这样
+                    {
+                        text: "xxx",
+                        id: 0,
+                        like: false
+                    }
+                    
+                ]
+             -->
+            <div v-for="selectedItem in selectedList" class="selected-menu">
+                <a class="active">{{ selectedItem.text}}</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.js"></script>
+
+    <script>
+        // (
+        //     [
+        //         {
+        //             text: "左边",
+        //             onClick(){
+        //                 console.log("左边点击了")
+        //             }
+        //         },
+        //         {
+        //             text: "左边",
+        //             onClick(){
+        //                 console.log("左边点击了")
+        //             }
+        //         },
+        //     ]
+        // )
+
+
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                goodsList: [{
+                    title: '上装',
+                    typeList: ['全部', '针织衫', '毛呢外套', 'T恤', '羽绒服', '棉衣', '卫衣', '风衣'],
+                    id: 1,
+                }, {
+                    title: '裤装',
+                    typeList: ['全部', '牛仔裤', '小脚/铅笔裤', '休闲裤', '打底裤', '哈伦裤'],
+                    id: 2,
+                }, {
+                    title: '裙装',
+                    typeList: ['全部', '连衣裙', '半身裙', '长袖连衣裙', '中长款连衣裙'],
+                    id: 3,
+                }],
+                selectedList: [],
+            },
+            methods: {
+                selectedHandle(listId, typeliText) {
+                    let newSelected = this.selectedList.filter(item => item.id !== listId);//筛选掉selectedList里中有该goodsListId的
+                    newSelected.push({
+                        text: typeliText,
+                        id: listId
+                    })
+                    this.selectedList = newSelected;//重新赋值，vue会收到通知，重新根据最新数据去渲染View视图
+                },
+                isCur(listId, typeliText) {
+                    let isFind = this.selectedList.find(item => item.id === listId && item.text === typeliText);
+                    console.log("111111111")
+                    if (isFind) {
+                        /* 有找到，是当前选中的 */
+                        return "active"
+                    } else {
+                        return ""
+                    }
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

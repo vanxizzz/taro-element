@@ -1,0 +1,46 @@
+@import "~@/globalCss/mixins";
+$verticalPadding: 20rpx;
+$horizontalPadding: 20rpx;
+$infoGray: #929292;
+.commonWrapperClass {
+    box-sizing: border-box;
+    // padding: 20rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 30rpx 0;
+}
+
+.infoWrapper {
+    .title {
+        font-size: 35rpx;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding: $verticalPadding 20rpx;
+        border-bottom: 1rpx solid #EEEEEE;
+    }
+    .itemWrapper {
+        color: $infoGray;
+        .item {
+            box-sizing: border-box;
+            padding: $verticalPadding $horizontalPadding;
+            font-size: 28rpx;
+            border-bottom: 1rpx solid #EEEEEE;
+            @include setFlex(flex-start,flex-start);
+            &:last-child {
+                border-bottom:none;
+            }
+            .label {
+                min-width: 150rpx;
+            }
+            .value {
+                .valueItem {
+                    margin-bottom: 5rpx;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

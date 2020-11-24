@@ -1,0 +1,10 @@
+@import '~taro-ui/dist/style/index.scss'; // 全局引入一次即可
+@import "./color.scss";
+@import "./icon.scss";
+@import "./constancePx.scss";
+
+Text,View {
+    font-size: 28rpx;
+}
+
+

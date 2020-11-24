@@ -1,0 +1,32 @@
+.orderRemind {
+    margin: 30rpx 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30rpx 6rpx;
+    border: 1px solid #CDCDCD;
+    border-radius: 20rpx;
+    display: flex;
+    align-items: center;
+    .word {
+        color:#02B6FD;
+        font-size: 28rpx;
+        margin: 0 18rpx;
+        .title {
+            font-size: 32rpx;
+            color:#099ad3;
+            margin-bottom: 10rpx;
+        }
+        .data {
+            .num {
+                color:#099ad3;
+            }
+        }
+    }
+    .startBtn {
+        background-color:#02B6FD;
+        color: #fff;
+        font-size: 30rpx;
+        font-weight: bold;
+        margin:0;
+    }
+}

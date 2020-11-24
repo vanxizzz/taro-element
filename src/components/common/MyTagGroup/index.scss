@@ -1,0 +1,22 @@
+@import  "~@/globalCss/color.scss" ;
+.tagWrapper {
+    display: flex;
+    .tag {
+        flex-grow: 1;
+        border-radius: 10rpx;
+        padding: 15rpx 0;
+        margin-right:  6rpx;
+        background-color: #fff;
+        color: #000;
+        border: 1rpx solid $themeBlue;
+        
+        text-align: center;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.cur {
+            background-color: $themeBlue;
+            color: #fff;
+        }
+    }
+}

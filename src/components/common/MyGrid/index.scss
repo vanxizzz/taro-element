@@ -1,0 +1,23 @@
+.myGrid {
+    &::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .item {
+
+        box-sizing: border-box;
+        padding: 10rpx;
+        float: left;
+        text-align: center;
+        &_img {
+
+            Image {
+                vertical-align: middle;
+            }
+        }
+        &_title {
+            font-size: 28rpx;
+        }
+    }
+}

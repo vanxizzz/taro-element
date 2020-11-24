@@ -1,0 +1,52 @@
+@import "~@/globalCss/constancePx.scss";
+@import "~@/globalCss/color";
+.login {
+    padding: $pagePadding;
+
+    .logoWrapper {
+        width: 100%;
+        height: 450rpx;
+        position: relative;
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    .title {
+        margin-bottom: 20rpx;
+        text-align: center;
+        color: #333;
+        font-size: 60rpx;
+    }
+    .loginMethodWrapper {
+        .btn {
+            border: none;
+            height: 100rpx;
+            line-height: 100rpx;
+        }
+        .btn-wechat {
+            background-color: $themeBlue;
+            font-weight: bold;
+            color: #fff;
+        }
+        .btn-phone {
+            background-color: transparent;
+            color: #666;
+        }
+        
+    }
+    .loginProtocol {
+        position: fixed;
+        width: 100%;
+        bottom: 70rpx;
+        left: 0;
+        font-size: 28rpx;
+        color: #B3B3B3;
+        text-align: center;
+        .protocol {
+            color: $themeBlue;
+        }
+    }
+}

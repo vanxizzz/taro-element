@@ -1,0 +1,57 @@
+@import "~@/globalCss/color";
+$tabListHeight: 100rpx;
+.tabList {
+    display: flex;
+    align-items: center;
+    // height: $tabListHeight;
+    .item {
+        height: 100%;
+        &.cur {
+            border-bottom: 1rpx solid $themeBlue;
+        }
+        // height: $tabListHeight;
+        // line-height: $tabListHeight;
+        flex-grow: 1;
+        box-sizing: border-box;
+        padding: 0rpx 10rpx;
+        text-align: center;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title {
+
+            position: relative;
+            // display: block;
+            // width: initial;
+            .dotCircle {
+                
+            }
+            .dot {
+                // line-height: initial;
+                position: absolute;
+                left: 55rpx;
+                top: -20rpx;
+                height: 35rpx;
+                box-sizing: border-box;
+                line-height: 25rpx;
+                padding: 5rpx 8rpx;
+                background-color: #f40;
+                color: #fff;
+                border-radius: 20rpx;
+                &.dotCircle {
+                    width: 20rpx;
+                    height: 20rpx;
+                    position: absolute;
+                    right: -14rpx;
+                    left: initial;
+                    top: -7rpx;
+                    padding:0;
+                    border-radius: 50%;
+                    background-color: #f40;
+                }
+            }
+        }
+    }
+}

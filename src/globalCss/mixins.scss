@@ -1,0 +1,16 @@
+
+
+@mixin setFixedHeight($height,$borderBottomColor){
+    height: $height;
+    line-height: $height;
+    box-sizing: border-box;
+    @if $borderBottomColor != none {
+        border-bottom: 1rpx solid $borderBottomColor;
+    }
+}
+
+@mixin setFlex($justifyContent:space-between,$alignItems:center){
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}

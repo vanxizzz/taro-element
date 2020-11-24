@@ -1,0 +1,12 @@
+
+
+.addressWrapper {
+    .changeAddress {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        .word {
+            font-size: 50rpx;
+        }
+    }
+}

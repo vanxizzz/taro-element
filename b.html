@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:keyup.tab.prevent="test" />
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.js"></script>
+    <script>
+        window.addEventListener("keyup", (e) => {
+            e.preventDefault();
+        })
+        const vm = new Vue({
+            data: {
+                c: 6,
+                obj: {
+                    name: "abc"
+                },
+                arr: [11, 22, 33]
+            },
+            methods: {
+                test(e) {
+                    e.preventDefault();
+                    console.log("测试")
+                }
+            }
+        })
+        vm.$mount("#app");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@import "~@/globalCss/mixins";
+@import "~@/globalCss/color";
+.detailPrice {
+    .title {
+        height: 130rpx;
+        line-height: 130rpx;
+        // @include setFixedHeight(140rpx,$themeGray);
+        font-size: 30rpx;
+        font-weight: bold;
+    }
+    .itemWrapper {
+        
+
+        .item {
+            padding: 10rpx 0;
+            @include setFlex(space-between,center);
+
+            .left {
+                @include setFlex(flex-start,center);
+                flex-grow: 1;
+                .imageWrapper {
+                    width: 160rpx;
+                    height: 160rpx;
+                    border-radius: 15rpx;
+                    overflow: hidden;
+                    margin-right: 20rpx;
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    
+                }
+                .info {
+                    .menuName {
+                        font-size: 34rpx;
+                    }  
+                    .specs {
+                        color: $themeGray;
+                    }
+                }
+            }
+
+            .right {
+                @include setFlex(space-between,center);
+                flex-grow: 1;
+                .numBox {
+                    font-size: 24rpx;
+                    color: $themeGray;
+                    .num {
+                        font-size: 28rpx;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.flexItemWrap {
+    border-bottom:1rpx solid $themeGray;
+    &:last-child {
+        border-bottom:none;
+
+    }
+}

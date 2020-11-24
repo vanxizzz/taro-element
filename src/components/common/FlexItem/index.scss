@@ -1,0 +1,16 @@
+@import "~@/globalCss/mixins";
+@import "~@/globalCss/color";
+
+.flexItemWrapper {
+    padding: 30rpx 0;
+    
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+    @include setFlex(space-between,center);
+    .item {
+        .content {
+            @include setFlex(space-between,center);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.mark {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    z-index: 999999;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+}
+.loadingWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: runLoading 1s ease infinite;
+}
+@keyframes runLoading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+
+    }
+}

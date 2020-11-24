@@ -1,0 +1,140 @@
+@import "./color.scss";
+@font-face {
+    font-family: 'iconfont';  /* project id 2104543 */
+    src: url('//at.alicdn.com/t/font_2104543_wbno811vhe.eot');
+    src: url('//at.alicdn.com/t/font_2104543_wbno811vhe.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2104543_wbno811vhe.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2104543_wbno811vhe.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2104543_wbno811vhe.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2104543_wbno811vhe.svg#iconfont') format('svg');
+  }
+$iconfont:  "_global_iconfont";//._global_iconfont
+$menuIcon:   $iconfont + "-" + "menuIcon";//._global_iconfont-menuIcon
+$eleIcon:  $iconfont + "-" + "eleIcon";
+$myIcon:  $iconfont + "-" + "myIcon";
+
+.#{$iconfont} {
+    font-family: "iconfont";
+    //首页，图标
+    &._global_iconfont-homeIcon::after {
+        content: "\e604";
+    }
+    //打勾，图标
+    &._global_iconfont-tickIcon::after {
+        content: "\e617";
+    }
+    //下箭头，图标
+    &._global_iconfont-bottomArrowIcon::after {
+        content: "\e603";
+    }
+    //筛选，图标
+    &._global_iconfont-filterIcon::after {
+        content: "\e641";
+    }
+    //联系电话，图标
+    &._global_iconfont-concatIcon::after {
+        content: "\e60a";
+    }
+    //左箭头，图标
+    &._global_iconfont-leftArrowIcon::after {
+        content: "\e614";
+    }
+    //问号，图标
+    &._global_iconfont-wenhaoIcon::after {
+        content: "\e602";
+    }
+    //垃圾桶，图标
+    &._global_iconfont-rubbishIcon::after {
+        content: "\e67c";
+    }
+    //火，图标
+    &._global_iconfont-hotIcon::after {
+        content: "\e601";
+    }
+    //减少，图标
+    &._global_iconfont-decreaseIcon::after {
+        content: "\e600";
+    }
+    //右箭头，图标
+    &._global_iconfont-rightArrowIcon::after {
+        content: "\e635";
+    }
+    //商家页左下角的当前订单箱子，图标
+    &._global_iconfont-boxIcon::after {
+        content: "\e618";
+    }
+    //菜单，图标
+    &._global_iconfont-menuIcon::after {
+        content: "\e64e";
+    }
+    //编辑，图标
+    &._global_iconfont-editIcon::after {
+        content: "\e7a1";
+    }
+    //饿了么logo，图标
+    &._global_iconfont-eleIcon::after {
+        content: "\e722";
+    }
+    //我的，图标
+    &._global_iconfont-myIcon::after {
+        content: "\e645";
+    }
+    //位置，图标
+    &._global_iconfont-locationIcon::after {
+        content: "\e613";
+    }
+    //搜索，图标
+    &._global_iconfont-searchIcon::after {
+        content: "\e616";
+    }
+    //闹钟，图标
+    &._global_iconfont-alarmIcon::after {
+        content: "\e6f1";
+    }
+    //更多，图标
+    &._global_iconfont-moreIcon::after {
+        content: "\e8af";
+    }
+    //星星，图标
+    &._global_iconfont-starIcon::after {
+        content: "\e643";
+    }
+    //加载，图标
+    &._global_iconfont-loadingIcon::after {
+        content: "\e771";
+    }
+    //下箭头，图标
+    &._global_iconfont-arrowDownIcon::after {
+        content: "\e695";
+    }
+    //红包，图标
+    &._global_iconfont-redPacketIcon::after {
+        content: "\e678";
+    }
+    //余额，图标
+    &._global_iconfont-surplusIcon::after {
+        content: "\e647";
+    }
+    //礼物，图标
+    &._global_iconfont-giftIcon::after {
+        content: "\e611";
+    }
+    //规则，图标
+    &._global_iconfont-ruleIcon::after {
+        content: "\e791";
+    }
+    //爱心，图标
+    &._global_iconfont-loveIcon::after {
+        content: "\e791";
+    }
+    //客服，图标
+    &._global_iconfont-customerServiceIcon::after {
+        content: "\e791";
+    }
+    //添加地址的添加，图标
+    &._global_iconfont-addIcon::after {
+        content: "\e68a";
+    }
+
+}
+

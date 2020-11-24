@@ -1,0 +1,18 @@
+@import "~@/globalCss/color";
+
+.bottomWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0rpx 18rpx 34rpx 0rpx #ccc;
+    .word {
+        color: $themeBlue;
+        font-size: 40rpx;
+        vertical-align: middle;
+            
+    }
+}

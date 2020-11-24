@@ -1,0 +1,39 @@
+@import "~@/globalCss/color.scss";
+.ticketWrapper {
+    display: flex;
+    .item {
+        
+        flex-grow: 1;
+        position: relative;
+        height: 170rpx;
+        background-color: #fff;
+        box-shadow: 0px 0px 4px 0px #999;
+        border-radius: 15rpx;
+        margin: 0 20rpx 0 5rpx;
+        &:last-child {
+            margin-left: 0;
+        }
+
+        .img {
+            position: absolute;
+            right: 30rpx;
+            top: 40rpx;
+        }
+        .info {
+            position: absolute;
+            top: 50%;
+            left: 20rpx;
+            transform: translateY(-50%);
+            .title {
+                font-size: 40rpx;
+            }
+            .num {
+                font-size: 30rpx;
+                color: #999;
+            }
+            .red {
+                color: #f40;
+            }
+        }
+    }
+}
